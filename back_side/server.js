@@ -1,16 +1,14 @@
+const express = require('express')
+const app = express()
 
-const http = require('http');
-// express library import
-const express = require('express');
-// create instance of express library
-const app = express();
-// create server 
-const server = http.createServer((req, res) => {
-    res.end('Voilà la réponse du serveur !');
-});
+// les layouts mais peut être du front ?
+const expressLayouts = require('express-ejs-layouts')
 
-server.listen(process.env.PORT || 3000);
+app.set('view engine', 'ejs')
+app.set('views', __dirname + '/views')
+app.set('layout', 'layouts/layout')
 
+app.use(expressLayouts)
+app.use(express.static('public'))
 
-
-module.exports = app;
+app.listen(process.env.PORT || 3000)
