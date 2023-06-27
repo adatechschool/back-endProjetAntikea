@@ -1,9 +1,15 @@
-const express = require('express');
-const router = express.Router();
+// ---ROUTES for index.html---
 
+// import library express in this file
+const express = require('express')
+// method Router allows us to create routes
+const router = express.Router()
 
-module.exports = router;
-
+// GET route for basic url
 router.get('/', (req, res) => {
-    res.render('index');
-});
+    res.render('index')
+})
+
+
+// export router 
+module.exports = router
