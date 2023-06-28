@@ -1,3 +1,6 @@
+import React from "react";
+import Footer from "./Footer";
+
 function App() {
   //state
   
@@ -6,7 +9,12 @@ function App() {
 
 
   //render(affichage)
-
+  return (
+    <div>
+      <h1>BHAAAAAAAAAAAAAAAAAAAAAAA</h1>
+      <Footer/>
+    </div>
+  )
 
 }
 
