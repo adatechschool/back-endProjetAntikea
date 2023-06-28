@@ -7,6 +7,7 @@ const router = express.Router()
 
 // GET route for basic url
 router.get('/', (req, res) => {
+    // index.ejs
     res.render('index')
 })
 

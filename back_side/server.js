@@ -1,5 +1,5 @@
 if(process.env.NODE_ENV !== 'production'){
-    require('dotenv').parse()
+    require('dotenv').config()
 }
 
 
@@ -26,7 +26,7 @@ app.use(express.static('public'))
 
 // setting up our database
 const mongoose = require('mongoose')
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true })
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true})
 // log if we are connected or not to the database
 .then(() => {
     console.log('Connexion à la base de données réussie')
