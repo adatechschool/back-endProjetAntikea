@@ -1,17 +1,14 @@
 import React from "react";
 import Footer from "./components/Footer/Footer";
 
-// function App() {
-  //state
-  
-
-  //comportement
-
-
-  //render(affichage)
-
-
-// }
+function App() {
+  return (
+    <div>
+      <h1>Bienvenue dans mon application React !</h1>
+      <p>C'est un exemple de code.</p>
+    </div>
+  );
+}
 
 const App = () => (
   <div>
