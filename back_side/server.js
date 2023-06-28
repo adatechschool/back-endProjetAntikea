@@ -1,4 +1,4 @@
-if(process.env.NODE_ENV !== 'production'){
+if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config()
 }
 
@@ -26,14 +26,15 @@ app.use(express.static('public'))
 
 // setting up our database
 const mongoose = require('mongoose')
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true})
-// log if we are connected or not to the database
-.then(() => {
-    console.log('Connexion à la base de données réussie')
-})
-.catch((error) => {
-    console.error('Erreur lors de la connexion à la base de données :', error)
-})
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+    // log if we are connected or not to the database
+    .then(() => {
+        console.log('Connexion à la base de données réussie')
+    })
+    .catch((error) => {
+        console.error('Erreur lors de la connexion à la base de données :', error)
+    })
+
 // another way to write
 /* const db = mongoose.connection
 db.on('error', error => console.error(error))
@@ -44,4 +45,4 @@ app.use('/', indexRouter)
 
 
 // server start nad listen on a specify port
-app.listen(process.env.PORT || 3000)
+app.listen(process.env.PORT || 27017)
