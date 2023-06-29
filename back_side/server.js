@@ -1,5 +1,5 @@
-if(process.env.NODE_ENV !== 'production'){
-    require('dotenv').parse()
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config()
 }
 
 
@@ -27,17 +27,18 @@ app.use(express.static('public'))
 // setting up our database
 const mongoose = require('mongoose')
 mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true })
-// log if we are connected or not to the database
-.then(() => {
-    console.log('Connexion à la base de données réussie')
-})
-.catch((error) => {
-    console.error('Erreur lors de la connexion à la base de données :', error)
-})
+    // log if we are connected or not to the database
+    .then(() => {
+        console.log('Connexion à la base de données réussie')
+    })
+    .catch((error) => {
+        console.error('Erreur lors de la connexion à la base de données :', error)
+    })
+
 // another way to write
-/* const db = mongoose.connection
+/*const db = mongoose.connection
 db.on('error', error => console.error(error))
-db.once('open', () => console.log('Connected to Mongoose')) */
+db.once('open', () => console.log('Connected to Mongoose'))*/
 
 // use the route
 app.use('/', indexRouter)
