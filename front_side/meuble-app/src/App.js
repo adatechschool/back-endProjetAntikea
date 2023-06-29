@@ -1,9 +1,20 @@
 import React from "react";
-import Button from "./components/button";
-import CardsProduits from "./components/CardsProduits/CardsProduits";
+import Connexion from "./components/Connection/Connexion";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+// import BasicExample from './components/Connection/Connexion';
 import Sorting from "./components/Sorting/Sorting.js";
 
 function App() {
-  return <div></div>;
+  return (
+    <div id="app">
+      {/* Autres composants et contenu de l'application */}
+      <Header />
+      <Connexion />
+      <Footer />
+      {/* <Button /> */}
+    </div>
+  );
 }
+
 export default App;

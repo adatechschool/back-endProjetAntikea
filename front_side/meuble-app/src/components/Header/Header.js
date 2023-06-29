@@ -2,28 +2,25 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import logo from './logo.jpg';
+import user from './user.png';
+import basket from'./basket-shopping-simple.png';
+import './Header.css';
 
 function Header() {
   return (
-    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
-      <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#features">ACCUEIL</Nav.Link>
-            <Nav.Link href="#pricing">NOUS CONTACTER</Nav.Link>
-            <Nav.Link href="#pricing">UN MEUBLE A VENDRE ?</Nav.Link>
-          </Nav>
-          <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <div className="header">
+      <div className="group-parent">
+        <img className="icon-user" alt="" src={user} />
+        <img className="icon-basket" alt="" src={basket} />
+        <div className="un-meuble-a-vendre-parent">
+          <b className="un-meuble-a">UN MEUBLE A VENDRE ?</b>
+          <b className="acceuil">ACCEUIL</b>
+          <b className="nous-contacter">NOUS CONTACTER</b>
+        </div>
+      </div>
+      <img className="logo" alt="" src={logo} />
+    </div>
   );
 }
 
