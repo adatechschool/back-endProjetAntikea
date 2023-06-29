@@ -13,7 +13,7 @@ const meubleModel = mongoose.model('Meuble', meubleSchema)
 // --- New Route :create the route to display 5 last fourniture to sell on the home page ---
 // GET to obtain the info from the "meubles" table
 router.get('/', (req, res) => {
-    meubleModel.find({}).limit(5)
+    meubleModel.find({})
         .then(meubles => {
             res.json(meubles)
         })
