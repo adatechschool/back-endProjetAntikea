@@ -11,3 +11,34 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+footer {
+  display: flex;
+  background-color: rgb(133, 133, 133);
+}
+
+.column {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.column h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.column p,
+.column li {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.column a {
+  color: #666;
+  text-decoration: none;
+}
+
+.column a:hover {
+  text-decoration: underline;
+}
