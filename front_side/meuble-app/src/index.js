@@ -1,27 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-// import './index.css';
-// import App from './App';
+import './index.css';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
-// import Nav from 'react-bootstrap/Nav';
-// import Footer from './components/Footer/Footer';
-import Footer from './Footer';
-import Connexion from './components/Connection/Connexion';
-// import React from "react";
-// import ReactDOM from "react-dom/client";
-// import "./index.css";
-// import App from "./App";
-// import reportWebVitals from "./reportWebVitals";
-// import Footer from "./components/Footer/Footer";
-// import "bootstrap/dist/css/bootstrap.min.css";
-// import { Button } from 'react-bootstrap/lib/InputGroup';
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <Connexion />
-    <Footer />
+    <App />
+    {/* <Connexion /> */}
+    {/* <Footer /> */}
     {/* <Button /> */}
   </React.StrictMode>
 );

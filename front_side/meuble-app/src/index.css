@@ -1,15 +1,18 @@
-div {
+/* div {
   display: flex;
   justify-items: center;
-}
+} */
 
 .logo {
   width: 15%;
 }
 
-
+html {
+  height: 100%;
+}
 
 body {
+  height: 100%;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -23,34 +26,80 @@ code {
     monospace;
 }
 
-footer {
+#root {
+  height: 100%;
+}
+
+#app {
+  height: 100%;
   display: flex;
-  background-color: #919191;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#conn {
+  margin-bottom: 50px;
+}
+
+#email {
+  margin-bottom: 50px;
+}
+
+#inputmdp {
+  /* padding-top: 10px; */
+}
+
+#mdp {
+  /* margin-top: 110px; */
+}
+
+footer {
+  background-color: #f2f2f2;
+  padding: 40px;
+  bottom: 0px;
+  color: #666;
+  font-family: Arial, sans-serif;
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: end;
 }
 
 .column {
-  flex: 1;
-  padding: 0 10px;
+  flex: 1 1 300px;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 
-.column h1 {
-  font-size: 18px;
-  margin-bottom: 10px;
+footer h1 {
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 
-.column p,
-.column li {
+footer p {
   font-size: 14px;
   line-height: 1.5;
   margin-bottom: 10px;
 }
 
-.column a {
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer li {
+  margin-bottom: 5px;
+}
+
+footer a {
   color: #666;
   text-decoration: none;
 }
 
-.column a:hover {
+footer a:hover {
   text-decoration: underline;
 }
+
+
 
