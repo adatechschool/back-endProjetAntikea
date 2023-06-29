@@ -1,13 +1,11 @@
 import React from "react";
+import Button from "./components/button";
 
 function App() {
   return (
     <div>
-      <h1>Bienvenue dans mon application React !</h1>
-      <p>C'est un exemple de code.</p>
+      <Button />
     </div>
   );
 }
-
-
 export default App;
