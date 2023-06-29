@@ -40,9 +40,9 @@ mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTo
     })
 
 // another way to write
-/* const db = mongoose.connection
+/*const db = mongoose.connection
 db.on('error', error => console.error(error))
-db.once('open', () => console.log('Connected to Mongoose')) */
+db.once('open', () => console.log('Connected to Mongoose'))*/
 
 // use the route
 app.use('/', indexRouter)
