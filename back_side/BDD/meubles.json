@@ -1,0 +1,144 @@
+[{
+    "_id": {
+      "$oid": "649c311fe53710ff6ee4bd0b"
+    },
+    "nom": "Table",
+    "type": "Meuble",
+    "prix": 100,
+    "image": "table.jpg",
+    "couleur": "blanc",
+    "description": "Une belle table en bois",
+    "dimensions": "100x50x75",
+    "matière": "bois",
+    "stock": 10,
+    "etat": "neuf",
+    "id_vendeur": "123abc",
+    "date_d_ajout": "2023-06-28",
+    "statut": "En cours"
+  },
+  {
+    "_id": {
+      "$oid": "649c32f6e53710ff6ee4bd0c"
+    },
+    "nom": "Table1",
+    "type": "Table",
+    "prix": 100,
+    "image": "table1.jpg",
+    "couleur": "Blanc",
+    "description": "Une belle table",
+    "dimensions": "100x50x70",
+    "matière": "Bois",
+    "stock": 10,
+    "etat": "Neuf",
+    "id_vendeur": "V001",
+    "date_d_ajout": "2023-06-28",
+    "statut": "Livré"
+  },
+  {
+    "_id": {
+      "$oid": "649c357ee53710ff6ee4bd0d"
+    },
+    "nom": "Lit en bois",
+    "type": "Simple",
+    "prix": 199.99,
+    "image": "lit.jpg",
+    "couleur": "Brun",
+    "description": "Un lit en bois de haute qualité",
+    "dimensions": "90x200 cm",
+    "matière": "Bois",
+    "stock": 10,
+    "etat": "Nouveau",
+    "id_vendeur": "12345",
+    "date_d_ajout": "2023-06-28",
+    "statut": "Payé"
+  },
+  {
+    "_id": {
+      "$oid": "649c3627e53710ff6ee4bd0e"
+    },
+    "nom": "Table de chevet en bois",
+    "type": "Bois",
+    "prix": 99.99,
+    "image": "table-chevet.jpg",
+    "couleur": "Marron",
+    "description": "Une table de chevet en bois avec tiroir et étagère.",
+    "dimensions": "50cm x 40cm x 60cm",
+    "matière": "Bois massif",
+    "stock": 10,
+    "etat": "Neuf",
+    "id_vendeur": "123456789",
+    "date_d_ajout": "2023-06-28",
+    "statut": "En cours"
+  },
+  {
+    "_id": {
+      "$oid": "649c364fe53710ff6ee4bd0f"
+    },
+    "nom": "Canapé en cuir",
+    "type": "Canapé 3 places",
+    "prix": 599,
+    "image": "sofa.jpg",
+    "couleur": "Noir",
+    "description": "Canapé en cuir véritable avec un design moderne.",
+    "dimensions": "L 200cm x H 80cm x P 90cm",
+    "matière": "Cuir",
+    "stock": 10,
+    "etat": "Nouveau",
+    "id_vendeur": "12345",
+    "date_d_ajout": "2023-06-28",
+    "statut": "Payé"
+  },
+  {
+    "_id": {
+      "$oid": "649c3673e53710ff6ee4bd10"
+    },
+    "nom": "My Chair",
+    "type": "Fauteuil",
+    "prix": 199.99,
+    "image": "chair.jpg",
+    "couleur": "Bleu",
+    "description": "Un fauteuil confortable et élégant.",
+    "dimensions": "80cm x 70cm x 90cm",
+    "matière": "Velours",
+    "stock": 10,
+    "etat": "Nouveau",
+    "id_vendeur": "12345",
+    "date_d_ajout": "28/06/2023",
+    "statut": "Livré"
+  },
+  {
+    "_id": {
+      "$oid": "649c3bdce53710ff6ee4bd1b"
+    },
+    "nom": "Pouf en velours",
+    "type": "Mobilier",
+    "prix": 99.99,
+    "image": "pouf-velours.jpg",
+    "couleur": "Bleu",
+    "description": "Un pouf confortable en velours bleu.",
+    "dimensions": "40cm x 40cm",
+    "matière": "Velours",
+    "stock": 10,
+    "etat": "Neuf",
+    "id_vendeur": "123456789",
+    "date_d_ajout": "2023-06-28",
+    "statut": "Payé"
+  },
+  {
+    "_id": {
+      "$oid": "649c3bece53710ff6ee4bd1c"
+    },
+    "nom": "Lit pour enfant",
+    "type": "Lit simple",
+    "prix": 199.99,
+    "image": "https://example.com/bed.jpg",
+    "couleur": "Bleu",
+    "description": "Un lit confortable et sûr pour les enfants.",
+    "dimensions": "90x190 cm",
+    "matière": "Bois",
+    "stock": 10,
+    "etat": "Nouveau",
+    "id_vendeur": "12345",
+    "date_d_ajout": "2023-06-28",
+    "statut": "Livré"
+  }]
