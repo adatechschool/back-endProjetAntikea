@@ -1,4 +1,4 @@
-if(process.env.NODE_ENV !== 'production'){
+if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config()
 }
 
@@ -12,7 +12,10 @@ const app = express() //=server
 const expressLayouts = require('express-ejs-layouts')
 
 // import router
+// index
 const indexRouter = require('./routes/index')
+//login
+const loginRouter = require('./routes/login')
 const homePageRouter = require('./routes/home-page')
 
 // server settings
@@ -27,14 +30,15 @@ app.use(express.static('public'))
 
 // setting up our database
 const mongoose = require('mongoose')
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true })
-// log if we are connected or not to the database
-.then(() => {
-    console.log('Connexion à la base de données réussie')
-})
-.catch((error) => {
-    console.error('Erreur lors de la connexion à la base de données :', error)
-})
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+    // log if we are connected or not to the database
+    .then(() => {
+        console.log('Connexion à la base de données réussie')
+    })
+    .catch((error) => {
+        console.error('Erreur lors de la connexion à la base de données :', error)
+    })
+
 // another way to write
 /* const db = mongoose.connection
 db.on('error', error => console.error(error))
@@ -42,6 +46,7 @@ db.once('open', () => console.log('Connected to Mongoose')) */
 
 // use the route
 app.use('/', indexRouter)
+app.use('/login', loginRouter)
 app.use('/meubles', homePageRouter)
 
 
