@@ -5,9 +5,10 @@ const express = require('express')
 // method Router allows us to create routes
 const router = express.Router()
 
-// GET route for basic url
-router.get('/', (req, res) => {
-    res.render('index')
+// --- New Route :create the route to display X last fourniture to sell on the home page ---
+// GET to obtain the info from the "meubles" table
+router.get('/meubles', (req, res) => {
+    res.json('home-page')
 })
 
 // export router 

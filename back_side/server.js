@@ -13,6 +13,7 @@ const expressLayouts = require('express-ejs-layouts')
 
 // import router
 const indexRouter = require('./routes/index')
+const homePageRouter = require('./routes/home-page')
 
 // server settings
 app.set('view engine', 'ejs')  // set server views 
@@ -39,8 +40,9 @@ mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true })
 db.on('error', error => console.error(error))
 db.once('open', () => console.log('Connected to Mongoose')) */
 
-// use the route
+// explaining at our app how to use routes
 app.use('/', indexRouter)
+app.use('/meubles', homePageRouter)
 
 
 // server start nad listen on a specify port
