@@ -1,6 +1,8 @@
 import React from 'react';
 import Footer from './Footer';
-import Connexion from './component/Connexion';
+import Connexion from './components/Connection/Connexion';
+import React from "react";
+// import Button from "./components/button";
 
 function App() {
   return (
@@ -8,6 +10,7 @@ function App() {
       {/* Autres composants et contenu de l'application */}
       <Connexion />
       <Footer />
+      {/* <Button /> */}
     </div>
   );
 }
