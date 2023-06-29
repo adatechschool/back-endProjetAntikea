@@ -16,6 +16,7 @@ const expressLayouts = require('express-ejs-layouts')
 const indexRouter = require('./routes/index')
 //login
 const loginRouter = require('./routes/login')
+const homePageRouter = require('./routes/home-page')
 
 // server settings
 app.set('view engine', 'ejs')  // set server views 
@@ -46,6 +47,7 @@ db.once('open', () => console.log('Connected to Mongoose'))*/
 // use the route
 app.use('/', indexRouter)
 app.use('/login', loginRouter)
+app.use('/meubles', homePageRouter)
 
 
 

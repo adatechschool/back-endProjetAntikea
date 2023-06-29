@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
-const meubleSchema = mongoose.Schema({
 
+const meubleSchema = mongoose.Schema({
     "nom": { type: String, required: true },
     "type": { type: String, required: true },
     "prix": { type: Number, required: true },
@@ -14,7 +14,6 @@ const meubleSchema = mongoose.Schema({
     "id_vendeur": { type: String, required: true },
     "date_d_ajout": { type: String, required: true },
     "statut": { type: String, required: true }
-
 })
 
-module.exports = mongoose.model('Meuble', meubleSchema)
+module.export = meubleSchema
