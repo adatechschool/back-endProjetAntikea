@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from './logo.jpg';
 import user from './user.png';
-import basket from'./basket-shopping-simple.png';
+import basket from './basket-shopping-simple.png';
 import './Header.css';
 
 function Header() {
@@ -15,7 +15,7 @@ function Header() {
         <img className="icon-basket" alt="" src={basket} />
         <div className="un-meuble-a-vendre-parent">
           <b className="un-meuble-a">UN MEUBLE A VENDRE ?</b>
-          <b className="acceuil">ACCEUIL</b>
+          <b className="acceuil">ACCUEIL</b>
           <b className="nous-contacter">NOUS CONTACTER</b>
         </div>
       </div>
