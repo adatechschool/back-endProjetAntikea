@@ -14,12 +14,12 @@ const meubleModel = mongoose.model('Meuble', meubleSchema)
 // GET to obtain the info from the "meubles" table
 router.get('/', (req, res) => {
     meubleModel.find({}).limit(5)
-    .then(meubles => {
-        res.json(meubles)
-    })
-    .catch(err => {
-        console.log(err)
-    })
+        .then(meubles => {
+            res.json(meubles)
+        })
+        .catch(err => {
+            console.log(err)
+        })
 })
 
 
