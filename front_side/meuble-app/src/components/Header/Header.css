@@ -1,0 +1,70 @@
+.icon-user,
+.icon-basket {
+  position: absolute;
+  top: 32px;
+  left: 1578px;
+  width: 30px;
+  height: 30px;
+}
+.icon-user {
+  left: 1519px;
+}
+.acceuil,
+.un-meuble-a,
+.nous-contacter {
+  position: absolute;
+  display: inline-block;
+}
+.un-meuble-a {
+  top: 0;
+  left: 356px;
+  width: 227px;
+  height: 27px;
+}
+.acceuil {
+  top: 0;
+  left: 0;
+  width: 102px;
+  height: 19px;
+}
+.nous-contacter {
+  top: 0;
+  left: 130px;
+}
+.un-meuble-a-vendre-parent {
+  position: absolute;
+  top: 40px;
+  left: 71px;
+  width: 583px;
+  height: 28px;
+  mix-blend-mode: normal;
+}
+.group-parent {
+  position: absolute;
+  width: 1672px;
+  height: 109px;
+  top: 232px;
+  left: 28px;
+  background-color: transparent;
+  border-top: 2px solid darkslategray;
+  border-bottom: 2px solid darkslategray;
+  box-sizing: border-box;
+}
+.logo {
+  position: absolute;
+  top: 40px;
+  left: calc(50% - 318px);
+  width: 636px;
+  height: 152px;
+  object-fit: cover;
+}
+.header {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--color-darkslategray);
+  font-family: var(--font-roboto);
+}
