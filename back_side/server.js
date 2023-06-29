@@ -12,8 +12,10 @@ const app = express() //=server
 const expressLayouts = require('express-ejs-layouts')
 
 // import router
+// index
 const indexRouter = require('./routes/index')
-const homePageRouter = require('./routes/home-page')
+//login
+const loginRouter = require('./routes/login')
 
 // server settings
 app.set('view engine', 'ejs')  // set server views 
@@ -27,7 +29,7 @@ app.use(express.static('public'))
 
 // setting up our database
 const mongoose = require('mongoose')
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true })
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true })
     // log if we are connected or not to the database
     .then(() => {
         console.log('Connexion à la base de données réussie')
@@ -43,7 +45,8 @@ db.once('open', () => console.log('Connected to Mongoose'))*/
 
 // use the route
 app.use('/', indexRouter)
-app.use('/meubles', homePageRouter)
+app.use('/login', loginRouter)
+
 
 
 // server start nad listen on a specify port
