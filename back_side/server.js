@@ -12,7 +12,10 @@ const app = express() //=server
 const expressLayouts = require('express-ejs-layouts')
 
 // import router
+// index
 const indexRouter = require('./routes/index')
+//login
+const loginRouter = require('./routes/login')
 
 // server settings
 app.set('view engine', 'ejs')  // set server views 
@@ -42,6 +45,7 @@ db.once('open', () => console.log('Connected to Mongoose')) */
 
 // use the route
 app.use('/', indexRouter)
+app.use('/login', loginRouter)
 
 
 // server start nad listen on a specify port
