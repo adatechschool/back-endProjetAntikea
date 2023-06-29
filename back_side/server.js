@@ -21,7 +21,7 @@ const homePageRouter = require('./routes/home-page')
 // server settings
 app.set('view engine', 'ejs')  // set server views 
 app.set('views', __dirname + '/views') // path views
-app.set('layout', 'layouts/layout')  // layouts to display 
+//app.set('layout', 'layouts/layout')  // layouts to display 
 
 // server tools
 app.use(expressLayouts)
