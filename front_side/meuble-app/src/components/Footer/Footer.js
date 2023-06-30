@@ -12,23 +12,23 @@ const Footer = () => {
             </div>
             <div class="column" id="shopping">
                 <h1 id="textFooter">SHOPPING</h1>
-                <ul id="lien">
-                    <li><a href="#">Votre panier</a></li>
-                    <li><a href="#">Vos commandes</a></li>
-                    <li><a href="#">Vos favoris</a></li>
-                    <li><a href="#">Livraison</a></li>
+                <ul>
+                    <li id="lien"><a href="#">Votre panier</a></li>
+                    <li id="lien"><a href="#">Vos commandes</a></li>
+                    <li id="lien"><a href="#">Vos favoris</a></li>
+                    <li id="lien"><a href="#">Livraison</a></li>
                 </ul>
             </div>
             <div class="column" id="liens">
                 <h1 id="textFooter">PLUS DE LIENS</h1>
-                <ul id="lien">
-                    <li><a href="#">Nouveautés</a></li>
-                    <li><a href="#">Promotions</a></li>
+                <ul>
+                    <li id="lien"><a href="#">Nouveautés</a></li>
+                    <li id="lien"><a href="#">Promotions</a></li>
                 </ul>
             </div>
             <div class="column" id="events">
                 <h1 id="textFooter">EVENEMENTS</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br />Repellat a alias recusandae. Quis temporibus, in nisi impedit quisquam sunt odio deleniti quaerat,<br />consectetur sapiente nam voluptates, tempore distinctio similique libero.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br />Repellat a alias recusandae. Quis temporibus, in nisi impedit quisquam sunt odio deleniti quaerat</p>
             </div>
         </footer>
 

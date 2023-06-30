@@ -3,8 +3,8 @@ import Connexion from "./components/Connection/Connexion";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 // import BasicExample from './components/Connection/Connexion';
-import Sorting from "./components/Sorting/Sorting.js";
-import products from "./public/antikea.meubles.json";
+// import Sorting from "./components/Sorting/Sorting.js";
+// import products from "./public/antikea.meubles.json";
 
 function App() {
   return (
