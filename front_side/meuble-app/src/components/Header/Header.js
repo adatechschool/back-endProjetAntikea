@@ -11,13 +11,13 @@ function Header() {
       <img className="logo" alt="" src={logo} />
       <div className="navbar">
         <div className="icons">
-          <img className="icon-user" alt="user" src={user} />
-          <img className="icon-basket" alt="basket" src={basket} />
+          <Link to="/connexion"><img className="icon-user" alt="user" src={user} /></Link>
+          <Link to="/panier"><img className="icon-basket" alt="basket" src={basket} /></Link>
         </div>
         <div className="liens">
-          <b className="a-vendre">UN MEUBLE A VENDRE ?</b>
-          <b className="acceuil">ACCUEIL</b>
-          <b className="nous-contacter">NOUS CONTACTER</b>
+          <Link to="/vendre"><p className="a-vendre">UN MEUBLE A VENDRE ?</p></Link>
+          <Link to="/"><p className="acceuil">ACCUEIL</p></Link>
+          <Link to="/contact"><p className="nous-contacter">NOUS CONTACTER</p></Link>
         </div>
       </div>
     </header>
