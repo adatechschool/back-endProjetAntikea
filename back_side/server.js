@@ -20,6 +20,7 @@ const loginRouter = require('./routes/login')
 const meublesRouter = require('./routes/meubles')
 // sign in
 const signinRouter = require('./routes/login')
+
 // server settings
 app.set('view engine', 'ejs')  // set server views 
 app.set('views', __dirname + '/views') // path views

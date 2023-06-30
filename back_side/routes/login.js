@@ -10,11 +10,6 @@ const userSchema = require('../models/user');
 // transform our schema in model
 const userModel = mongoose.model('user', userSchema)
 
-const bodyParser = require('body-parser');
-const app = express()
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({extended:true}))
-
 
 // GET all users
 router.get('/', (req, res) => {
