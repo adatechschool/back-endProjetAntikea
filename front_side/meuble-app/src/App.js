@@ -4,7 +4,7 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 // import BasicExample from './components/Connection/Connexion';
 import Sorting from "./components/Sorting/Sorting.js";
-import products from "./public/antikea.meubles.json";
+import CardsProduits from "./components/CardsProduits/CardsProduits";
 
 function App() {
   return (
@@ -12,7 +12,8 @@ function App() {
       {/* Autres composants et contenu de l'application */}
       <Header />
       <Connexion />
-      <Footer />
+      <CardsProduits />
+      {/* <Footer /> */}
       {/* <Button /> */}
     </div>
   );
