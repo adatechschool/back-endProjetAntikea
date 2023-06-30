@@ -13,7 +13,7 @@ const meubleSchema = mongoose.Schema({
     "etat": { type: String, required: true },
     "id_vendeur": { type: String, required: true },
     "date_d_ajout": { type: String, required: true },
-    "statut": { type: String, required: true }
+    "statut": { type: String, required: true },
 })
 
 module.export = meubleSchema

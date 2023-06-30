@@ -11,21 +11,20 @@ const app = express() //=server
 // layouts to avoid code duplication - maybe unusefull 
 const expressLayouts = require('express-ejs-layouts')
 
+// middleware to translate requests to soomethng nodeJS understand
+const bodyParser = require('body-parser')
+
 // import router
-// index
 const indexRouter = require('./routes/index')
 //login
 const loginRouter = require('./routes/login')
 const meublesRouter = require('./routes/meubles')
-// server settings
-app.set('view engine', 'ejs')  // set server views 
-app.set('views', __dirname + '/views') // path views
-app.set('layout', 'layouts/layout')  // layouts to display 
 
 // server tools
 app.use(expressLayouts)
 app.use(express.static('public'))
-
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.json())
 
 // setting up our database
 const mongoose = require('mongoose')
