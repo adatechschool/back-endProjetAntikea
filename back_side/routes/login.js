@@ -1,4 +1,3 @@
-// ---ROUTES for index.html---
 
 // import library express in this file
 const express = require('express')

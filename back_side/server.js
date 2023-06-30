@@ -1,3 +1,4 @@
+// condition if we are in developement or in deployement
 if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config()
 }
@@ -14,9 +15,11 @@ const expressLayouts = require('express-ejs-layouts')
 // import router
 // index
 const indexRouter = require('./routes/index')
-//login
+//log in
 const loginRouter = require('./routes/login')
 const homePageRouter = require('./routes/home-page')
+// sign in
+const signinRouter = require('./routes/signin')
 
 // server settings
 app.set('view engine', 'ejs')  // set server views 
@@ -48,6 +51,7 @@ db.once('open', () => console.log('Connected to Mongoose'))*/
 app.use('/', indexRouter)
 app.use('/login', loginRouter)
 app.use('/meubles', homePageRouter)
+app.use('/signin', signinRouter)
 
 
 
