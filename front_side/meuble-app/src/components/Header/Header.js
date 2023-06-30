@@ -7,6 +7,7 @@ import './Header.css';
 function Header() {
   return (
     <header className="header">
+      <img className="logo" alt="" src={logo} />
       <div className="group-parent">
         <img className="icon-user" alt="" src={user} />
         <img className="icon-basket" alt="" src={basket} />
@@ -16,7 +17,6 @@ function Header() {
           <b className="nous-contacter">NOUS CONTACTER</b>
         </div>
       </div>
-      <img className="logo" alt="" src={logo} />
     </header>
   );
 }
