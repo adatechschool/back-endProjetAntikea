@@ -1,0 +1,41 @@
+#conn {
+    height: 100%;
+    display: flex;
+    margin-bottom: 10px;
+    background-color: rgb(151, 151, 151);
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 25%;
+    padding-right: 25%;
+    border: 2px solid black;
+    border-radius: 25px;
+}
+
+#txtco {
+    text-align: center;
+}
+
+/* #email {
+    size: 50px;
+} */
+
+#inputemail {
+    size: 500;
+}
+
+#mdp {
+
+}
+
+#btn {
+
+}
+
+#btnbtn {
+    background-color: rgb(105, 105, 105);
+    color: #fff;
+}
+
+#createaccount {
+    display: flex;
+}
