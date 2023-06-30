@@ -1,26 +1,26 @@
-a {
+.sorting > a {
   font-size: 11px;
   text-decoration: none !important;
   color: black !important;
 }
-a:hover {
+.sorting > a:hover {
   text-decoration: underline !important;
 }
 
-ul {
+.sorting > ul {
   list-style-type: none;
 }
 
-label {
+.sorting > label {
   font-size: smaller;
   padding: 10px;
 }
 
-li {
+.sorting > li {
   font-size: 12px;
   font-weight: 600;
 }
 
-label {
+.sorting > label {
   font-size: 10px;
 }

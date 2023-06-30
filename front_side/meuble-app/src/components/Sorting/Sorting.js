@@ -4,13 +4,13 @@ import "./Sorting.css";
 
 function SortingComponent() {
   return (
-    <div>
+    <div className="sorting">
       <ul>
-        <div class="list-group">
-          <a class="header">Nouveautés</a>
+        <div className="list-group">
+          <a className="header">Nouveautés</a>
         </div>
         <br />
-        <div class="list-group">
+        <div className="list-group">
           <li>Meubles</li>
           <a href="#">Canapé</a>
           <a href="#">Chaise</a>
@@ -18,16 +18,16 @@ function SortingComponent() {
           <a href="#">Banc</a>
         </div>
         <br />
-        <div class="list-group">
-          <li class="header"> Matière</li>
+        <div className="list-group">
+          <li className="header"> Matière</li>
           <a href="#">Bois</a>
           <a href="#">Fer</a>
           <a href="#">Verre</a>
           <a href="#">Cuir</a>
         </div>
         <br />
-        <div class="list-group">
-          <li class="header">Couleurs</li>
+        <div className="list-group">
+          <li className="header">Couleurs</li>
           <Form.Label htmlFor="exampleColorInput" />
           <Form.Control
             type="color"
@@ -36,27 +36,27 @@ function SortingComponent() {
           />
         </div>
         <br />
-        <div class="list-group">
-          <li class="header">Prix</li>
+        <div className="list-group">
+          <li className="header">Prix</li>
           <br />
-          <div class="filter-content">
-            <div class="card-body">
-              <div class="form-row">
-                <div class="form-group col-md-1">
+          <div className="filter-content">
+            <div className="card-body">
+              <div className="form-row">
+                <div className="form-group col-md-1">
                   <label>Min</label>
                   <input
                     type="number"
-                    class="form-control"
+                    className="form-control"
                     placeholder="0 €"
                     style={{ fontSize: "9px" }}
                   />
                 </div>
                 <br />
-                <div class="form-group col-md-1 text-right">
+                <div className="form-group col-md-1 text-right">
                   <label>Max</label>
                   <input
                     type="number"
-                    class="form-control"
+                    className="form-control"
                     placeholder="1000 €"
                     style={{ fontSize: "10px", display: "wrap" }}
                   />
