@@ -5,11 +5,9 @@ The schema acts as a model for the documents, allowing MongoDB to enforce data c
 Developers can specify the expected structure of their data and utilize features such as data validation, default values, and pre/post hooks for document lifecycle events.
  */
 
-
-
 const mongoose = require('mongoose')
 
-const meubleSchema = mongoose.Schema({
+const meubleSchema = new mongoose.Schema({
     "nom": { type: String, required: true },
     "type": { type: String, required: true },
     "prix": { type: Number, required: true },
@@ -25,4 +23,6 @@ const meubleSchema = mongoose.Schema({
     "statut": { type: String, required: true },
 })
 
-module.export = meubleSchema
+const meubleModel = mongoose.model('Meuble', meubleSchema)
+
+module.exports = meubleModel

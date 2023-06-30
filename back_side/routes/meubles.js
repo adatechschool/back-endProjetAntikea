@@ -11,9 +11,7 @@ const router = express.Router()
 const mongoose = require("mongoose")
 
 // import a meuble schema and change it to a model than can be manipulate
-const meubleSchema = require("../models/meuble")
-const meubleModel = mongoose.model('Meuble', meubleSchema)
-
+const meubleModel = require("../models/meuble")
 
 // 2.New Routes to manipulate *meubles collection*
 
