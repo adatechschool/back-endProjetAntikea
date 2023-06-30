@@ -6,9 +6,7 @@ const router = express.Router()
 // use to transform schema in model
 const mongoose = require('mongoose')
 // access models user
-const userSchema = require('../models/user');
-// transform our schema in model
-const userModel = mongoose.model('user', userSchema)
+const userModel = require('../models/user');
 
 
 // GET all users

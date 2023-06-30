@@ -1,7 +1,7 @@
 
 const mongoose = require("mongoose")
 // no need id because mondb check it automaticaly
-const userSchema = mongoose.Schema(
+const userSchema = new mongoose.Schema(
     {
         "firstName": { type: String },
         "lastName": { type: String },
@@ -9,3 +9,7 @@ const userSchema = mongoose.Schema(
         "password": { type: String },
         "admin": { type: Boolean }
     })
+
+const userModel = mongoose.model('users', userSchema)
+
+module.exports = userModel
