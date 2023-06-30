@@ -1,4 +1,3 @@
-// ---ROUTES for index.html---
 
 // import library express in this file
 const express = require('express')
@@ -10,6 +9,11 @@ const mongoose = require('mongoose')
 const userSchema = require('../models/user');
 // transform our schema in model
 const userModel = mongoose.model('user', userSchema)
+
+const bodyParser = require('body-parser');
+const app = express()
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended:true}))
 
 
 // GET all users
@@ -24,6 +28,21 @@ router.get('/', (req, res) => {
       console.log(err);
     })
 })
+
+router.post('/auth', async (req, res) => {
+  try {
+    const newUser = new userModel({
+      ...req.body
+    })
+    console.log(req.body);
+    const saveUser = await newUser.save()
+    res.status(201).json(saveUser)
+  }
+  catch (error) {
+    res.status(400).json(error)
+    console.log(error);
+  }
+});
 
 // export router 
 module.exports = router

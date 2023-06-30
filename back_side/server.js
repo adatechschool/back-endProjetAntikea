@@ -1,3 +1,4 @@
+// condition if we are in developement or in deployement
 if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config()
 }
@@ -16,7 +17,7 @@ const bodyParser = require('body-parser')
 
 // import router
 const indexRouter = require('./routes/index')
-//login
+//log in
 const loginRouter = require('./routes/login')
 const meublesRouter = require('./routes/meubles')
 
@@ -57,8 +58,6 @@ mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTo
 app.use('/', indexRouter)
 app.use('/login', loginRouter)
 app.use('/meubles', meublesRouter)
-
-
 
 // server start nad listen on a specify port
 app.listen(process.env.PORT || 3000)

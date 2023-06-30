@@ -19,8 +19,8 @@ const meubleModel = mongoose.model('Meuble', meubleSchema)
 // GET a specific furniture
 router.get('/:id', (req, res, next) => {
     meubleModel.findOne({ _id: req.params.id }) // the one where id is equal to id in the request
-    .then(meuble => res.status(200).json(meuble))
-    .catch(error => res.status(404).json({ error }))
+        .then(meuble => res.status(200).json(meuble))
+        .catch(error => res.status(404).json({ error }))
 })
 
 router.put("/:id", (req, res, next) => {
@@ -36,7 +36,7 @@ router.get('/', (req, res) => {
         .then(meubles => 
             res.status(200).json(meubles))
         .catch(error => res.status(400).json({ error }))
-        })
+})
 
 
 // POST to add a furniture in the data base
@@ -56,11 +56,10 @@ router.post('/', (req, res) => {
 // DELETE un meuble
 router.delete('/:id', (req, res) => {
     meubleModel.deleteOne({ _id: req.params.id })
-    .then(() => res.status(200).json({ message: 'Meuble supprimé'}))
-    .catch(error => res.status(400).json({ error }))
+        .then(() => res.status(200).json({ message: 'Meuble supprimé' }))
+        .catch(error => res.status(400).json({ error }))
 
 })
 
-
-// export router 
 module.exports = router
+
