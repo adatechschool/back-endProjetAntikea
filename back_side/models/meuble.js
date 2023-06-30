@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const meubleSchema = mongoose.Schema({
+const meubleSchema = new mongoose.Schema({
     "nom": { type: String, required: true },
     "type": { type: String, required: true },
     "prix": { type: Number, required: true },
@@ -15,5 +15,5 @@ const meubleSchema = mongoose.Schema({
     "date_d_ajout": { type: String, required: true },
     "statut": { type: String, required: true },
 })
-
-module.export = meubleSchema
+const meubleModel = mongoose.model('Meuble', meubleSchema)
+module.exports = meubleModel
