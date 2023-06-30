@@ -1,0 +1,26 @@
+Bonjour ! Bienvenus dans lr BACK
+Vous allez voir, c'est fantastique
+
+Un quick start :
+
+A. Récupérer le projet :
+1. se positionner dans le dossier back_side avec son terminal (intégré ou non)
+2. lancer une commande npm install pour récupérer toutes les dépendances
+
+B. pour lancer le serveur:
+1. se positionner dans le dossier back_side avec son terminal (intégré ou non)
+1. commande : npm run devStart
+=> un message de connection a la base de donnée doit s'afficher
+
+C. Arborescence:
+
+1. models: ce sont les models de données avec lesquels la base de donnée va interagir
+    !!! bien lire la doc de mongoose afin de bien instancier un model de donnée ( model != schema)
+
+2. node modules: c'est les librairies installées
+
+3. routes:  paramètres les endpoint API (CRUD : get, post, put, delete) (ne pas confondre les views/pages et les routes)
+
+4. .env: représente une varibale d'environnement qui permet de se connecter a la DB, si vous souhaitez passer sur une version cloud, cette dernière sera a modifiée. Egalement si le site passe en production.
+
+5. server.js: comporte toutes les références aux librairies, routes, connection, réglages, et affichages que notre server (nommée app) va utiliser.(en gros c'est les settings)s
