@@ -38,7 +38,7 @@ router.put("/:id", (req, res, next) => {
 router.get('/', (req, res) => {
     // find() is the method from mongoose library we need to get a collection
     meubleModel.find()
-        .then(meubles => 
+        .then(meubles =>
             res.status(200).json(meubles))
         .catch(error => res.status(400).json({ error }))
 })
@@ -52,8 +52,8 @@ router.post('/', (req, res) => {
     })
     addMeuble.markModified('object') // try to fix the bug, but did not work, no idea if it is usefull
     addMeuble.save()
-    .then(() => res.status(201).json({ message: 'Meuble ajouté'}))
-    .catch(error => res.status(400).json({ error }))
+        .then(() => res.status(201).json({ message: 'Meuble ajouté' }))
+        .catch(error => res.status(400).json({ error }))
 })
 
 // DELETE an item from the database
