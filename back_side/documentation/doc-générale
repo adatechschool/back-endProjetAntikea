@@ -13,14 +13,15 @@ B. pour lancer le serveur:
 => un message de connection a la base de donnée doit s'afficher
 
 C. Arborescence:
-
 1. models: ce sont les models de données avec lesquels la base de donnée va interagir
     !!! bien lire la doc de mongoose afin de bien instancier un model de donnée ( model != schema)
-
 2. node modules: c'est les librairies installées
-
 3. routes:  paramètres les endpoint API (CRUD : get, post, put, delete) (ne pas confondre les views/pages et les routes)
-
 4. .env: représente une varibale d'environnement qui permet de se connecter a la DB, si vous souhaitez passer sur une version cloud, cette dernière sera a modifiée. Egalement si le site passe en production.
+5. server.js: comporte toutes les références aux librairies, routes, connection, réglages, et affichages que notre server (nommée app) va utiliser.(en gros c'est les settings)
 
-5. server.js: comporte toutes les références aux librairies, routes, connection, réglages, et affichages que notre server (nommée app) va utiliser.(en gros c'est les settings)s
+D. Les docs externes
+1. npmJS : https://www.npmjs.com/
+2. Express : https://expressjs.com/fr/
+3. NodeJS : https://nodejs.org/en/docs
+4. Mongoose : https://mongoosejs.com/
