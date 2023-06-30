@@ -25,15 +25,15 @@ router.get('/:id', (req, res, next) => {
 
 router.put("/:id", (req, res, next) => {
     // use updateOne : argument 1 : id of request to compare, argument 2 : new version of the object
-    meubleModel.updateOne({ _id: req.params.id }, { ...req.body, _id: req.params.id}) // "..." is a spread operator allows us to get all the request in one command
-    .then(() => res.status(200).json({ message: 'Meuble modifié'}))
-    .catch(error => res.status(400).json({ error }))
+    meubleModel.updateOne({ _id: req.params.id }, { ...req.body, _id: req.params.id }) // "..." is a spread operator allows us to get all the request in one command
+        .then(() => res.status(200).json({ message: 'Meuble modifié' }))
+        .catch(error => res.status(400).json({ error }))
 })
 
 // GET to obtain all the info from the "meubles" table
 router.get('/', (req, res) => {
     meubleModel.find()
-        .then(meubles => 
+        .then(meubles =>
             res.status(200).json(meubles))
         .catch(error => res.status(400).json({ error }))
 })
@@ -49,8 +49,8 @@ router.post('/', (req, res) => {
     })
     addMeuble.markModified('object')
     addMeuble.save()
-    .then(() => res.status(201).json({ message: 'Meuble ajouté'}))
-    .catch(error => res.status(400).json({ error }))
+        .then(() => res.status(201).json({ message: 'Meuble ajouté' }))
+        .catch(error => res.status(400).json({ error }))
 })
 
 // DELETE un meuble
