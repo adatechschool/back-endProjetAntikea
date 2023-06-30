@@ -6,13 +6,13 @@ const Footer = () => {
         <footer>
             <div class="column" id="norm">
                 <h1>ANTIKEA</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur<br />adipiscing elit</p>
-                <p>3 bd Stalingrad, 44000<br />Nantes</p>
-                <p href="">contact@antikea.fr</p>
+                <p>Lorem ipsum dolor sit amet, consectetur<br />adipiscing elit<br/>
+                3 bd Stalingrad, 44000<br />Nantes</p>
+                <a href="#">contact@antikea.fr</a>
             </div>
             <div class="column" id="shopping">
                 <h1 id="textFooter">SHOPPING</h1>
-                <ul>
+                <ul id="lien">
                     <li><a href="#">Votre panier</a></li>
                     <li><a href="#">Vos commandes</a></li>
                     <li><a href="#">Vos favoris</a></li>
@@ -21,7 +21,7 @@ const Footer = () => {
             </div>
             <div class="column" id="liens">
                 <h1 id="textFooter">PLUS DE LIENS</h1>
-                <ul>
+                <ul id="lien">
                     <li><a href="#">Nouveautés</a></li>
                     <li><a href="#">Promotions</a></li>
                 </ul>
