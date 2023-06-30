@@ -28,6 +28,7 @@ app.set('views', __dirname + '/views') // path views
 // server tools
 app.use(expressLayouts)
 app.use(express.static('public'))
+app.use(express.json())
 
 
 // setting up our database
