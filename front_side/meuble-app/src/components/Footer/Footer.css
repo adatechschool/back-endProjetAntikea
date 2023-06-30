@@ -1,5 +1,5 @@
 #textFooter {
-  color: #FFF951;
+  color: #222222;
 }
 
 #app {
@@ -21,10 +21,10 @@
 
 footer {
   width: 100%;
-  background-color: #323334;
-  padding-top: 40px;
+  background-color: #eeeeee;
+  padding: 40px;
   bottom: 0px;
-  color: #C1C1C2;
+  color: #5c5c5c;
   font-family: Roboto;
   display: flex;
   justify-content: end;
@@ -64,10 +64,8 @@ footer li {
   text-decoration: none;
 }
 
-
-
 footer a {
-  color: #C1C1C2 !important;
+  color: #5c5c5c !important;
   text-decoration: none;
 }
 
@@ -75,7 +73,8 @@ footer a:hover {
   text-decoration: underline;
 }
 
-.logo {
-  position:relative;
-  z-index:1000;
+.logo2 {
+  position: relative;
+  z-index: 1000;
+  width: 200px;
 }
