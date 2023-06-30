@@ -18,23 +18,23 @@ const meubleModel = mongoose.model('Meuble', meubleSchema)
 // GET a specific furniture
 router.get('/:id', (req, res, next) => {
     meubleModel.findOne({ _id: req.params.id }) // the one where id is equal to id in the request
-    .then(meuble => res.status(200).json(meuble))
-    .catch(error => res.status(404).json({ error }))
+        .then(meuble => res.status(200).json(meuble))
+        .catch(error => res.status(404).json({ error }))
 })
 
 router.put("/:id", (req, res, next) => {
     // use updateOne : argument 1 : id of request to compare, argument 2 : new version of the object
-    meubleModel.updateOne({ _id: req.params.id }, { ...req.body, _id: req.params.id}) // "..." is a spread operator allows us to get all the request in one command
-    .catch(error => res.status(400).json({ error }))
+    meubleModel.updateOne({ _id: req.params.id }, { ...req.body, _id: req.params.id }) // "..." is a spread operator allows us to get all the request in one command
+        .catch(error => res.status(400).json({ error }))
 })
 
 // GET to obtain all the info from the "meubles" table
 router.get('/', (req, res) => {
     meubleModel.find()
-        .then(meubles => 
+        .then(meubles =>
             res.status(201).json(meubles))
         .catch(error => res.status(400).json({ error }))
-        })
+})
 
 
 // POST to add a furniture in the data base
@@ -50,8 +50,10 @@ router.post('/', (req, res) => {
 // DELETE un meuble
 router.delete('/:id', (req, res) => {
     meubleModel.deleteOne({ _id: req.params.id })
-    .then(() => res.status(200).json({ message: 'Meuble supprimé'}))
-    .catch(error => res.status(400).json({ error }))
+        .then(() => res.status(200).json({ message: 'Meuble supprimé' }))
+        .catch(error => res.status(400).json({ error }))
 
 })
+
+module.exports = router
 
