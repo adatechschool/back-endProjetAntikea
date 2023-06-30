@@ -17,10 +17,9 @@ const expressLayouts = require('express-ejs-layouts')
 const indexRouter = require('./routes/index')
 //log in
 const loginRouter = require('./routes/login')
-const homePageRouter = require('./routes/home-page')
+const meublesRouter = require('./routes/meubles')
 // sign in
 const signinRouter = require('./routes/login')
-
 // server settings
 app.set('view engine', 'ejs')  // set server views 
 app.set('views', __dirname + '/views') // path views
@@ -47,10 +46,21 @@ mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTo
 db.on('error', error => console.error(error))
 db.once('open', () => console.log('Connected to Mongoose'))*/
 
+/* // setting up our database if its the online one. DO NOT USE
+const mongoose = require('mongoose')
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+    // log if we are connected or not to the database
+    .then(() => {
+        console.log('Connexion à la base de données réussie')
+    })
+    .catch((error) => {
+        console.error('Erreur lors de la connexion à la base de données :', error)
+    }) */
+
 // use the route
 app.use('/', indexRouter)
 app.use('/login', loginRouter)
-app.use('/meubles', homePageRouter)
+app.use('/meubles', meublesRouter)
 app.use('/signin', signinRouter)
 
 
