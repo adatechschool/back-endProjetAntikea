@@ -15,8 +15,10 @@ function App() {
       <Router>
         <Header />
         <Routes>
+          {/* Pb de Route quand 2 path identiques (Sorting et CardProduit) avoir si mettre dans meme fichier */}
           <Route exact path="/" element={<Sorting />} />
           <Route exact path="/" element={<CardsProduits />} />
+          
           <Route path="/connexion" element={<Connexion />} />
           <Route path="/panier" element={<Panier />} />
           <Route path="/ficheproduit" element={<FicheProduit />} />
