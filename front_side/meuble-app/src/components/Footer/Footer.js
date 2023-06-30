@@ -1,4 +1,6 @@
 import React from "react";
+import logo from '../Header/logo.jpg';
+
 import './Footer.css'
 
 const Footer = () => {
@@ -6,6 +8,7 @@ const Footer = () => {
         <footer>
             <div class="column" id="norm">
                 <h1>ANTIKEA</h1>
+                <img class="logo" alt="logo" src={logo} />
                 <p>Lorem ipsum dolor sit amet, consectetur<br />adipiscing elit<br/>
                 3 bd Stalingrad, 44000<br />Nantes</p>
                 <a href="#">contact@antikea.fr</a>
