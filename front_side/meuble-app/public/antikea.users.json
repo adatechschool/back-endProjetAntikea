@@ -1,0 +1,100 @@
+[{
+  "_id": {
+    "$oid": "649aeedd6bf5ed5dea39d148"
+  },
+  "firstName": "Axel",
+  "lastName": "Bourdet",
+  "email": "a.bourdet@gmail.com",
+  "password": "k1k2",
+  "admin": false
+},
+{
+  "_id": {
+    "$oid": "649af06b6bf5ed5dea39d149"
+  },
+  "firstName": "Lauréline",
+  "lastName": "Fleury",
+  "email": "l.fleury@gmail.com",
+  "password": "4H1k2",
+  "admin": true
+},
+{
+  "_id": {
+    "$oid": "649c45cd7e2565833cffa985"
+  },
+  "firstName": "Elsa",
+  "lastName": "Catoire",
+  "email": "elsa.catoire@example.com",
+  "password": "MotDePasse1",
+  "admin": false
+},
+{
+  "_id": {
+    "$oid": "649c46ed7e2565833cffa986"
+  },
+  "firstName": "Gianni",
+  "lastName": "Acardi",
+  "email": "gianni.acardi@example.com",
+  "password": "MotDePasse2",
+  "admin": false
+},
+{
+  "_id": {
+    "$oid": "649c48447e2565833cffa98a"
+  },
+  "firstName": "Aissata",
+  "lastName": "Diallo",
+  "email": "aissata.diallo@example.com",
+  "password": "MotDePasse3",
+  "admin": false
+},
+{
+  "_id": {
+    "$oid": "649c48747e2565833cffa98b"
+  },
+  "firstName": "Alissia",
+  "lastName": "Leroy",
+  "email": "alissia.leroy@example.com",
+  "password": "MotDePasse4",
+  "admin": false
+},
+{
+  "_id": {
+    "$oid": "649c487c7e2565833cffa98c"
+  },
+  "firstName": "Marion",
+  "lastName": "Lopez",
+  "email": "marion.lopez@example.com",
+  "password": "MotDePasse5",
+  "admin": false
+},
+{
+  "_id": {
+    "$oid": "649c48917e2565833cffa98d"
+  },
+  "firstName": "Quentin",
+  "lastName": "Rousseau",
+  "email": "quentin.rousseau@example.com",
+  "password": "MotDePasse6",
+  "admin": false
+},
+{
+  "_id": {
+    "$oid": "649c48997e2565833cffa98e"
+  },
+  "firstName": "Meghan",
+  "lastName": "Grousset",
+  "email": "meghan.grousset@example.com",
+  "password": "MotDePasse7",
+  "admin": false
+},
+{
+  "_id": {
+    "$oid": "649c48ad7e2565833cffa98f"
+  },
+  "firstName": "Sébastien",
+  "lastName": "Fougères",
+  "email": "sebastien.fougeres@example.com",
+  "password": "MotDePasse8",
+  "admin": false
+}]
