@@ -24,5 +24,25 @@ router.get('/', (req, res) => {
     })
 })
 
+router.post('/auth', (req, res) => {
+    try {
+        const newUser = new userModel(
+            {
+                "firstName": "ryu",
+                "lastName": "Oshi",
+                "email": "streetfighter@example.com",
+                "password": "hadouken",
+                "admin": false
+            }
+        )
+        const saveUser = newUser.save()
+        res.status(201).json(saveUser)
+    }
+    catch (error) {
+        res.status(400).json(error)
+        console.log(error);
+    }
+});
+
 // export router 
 module.exports = router

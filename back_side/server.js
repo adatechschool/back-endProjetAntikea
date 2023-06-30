@@ -19,7 +19,7 @@ const indexRouter = require('./routes/index')
 const loginRouter = require('./routes/login')
 const homePageRouter = require('./routes/home-page')
 // sign in
-const signinRouter = require('./routes/signin')
+const signinRouter = require('./routes/login')
 
 // server settings
 app.set('view engine', 'ejs')  // set server views 

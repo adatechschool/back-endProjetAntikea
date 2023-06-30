@@ -18,26 +18,26 @@ const meubleModel = mongoose.model('Meuble', meubleSchema)
 // GET a specific furniture
 router.get('/:id', (req, res, next) => {
     meubleModel.findOne({ _id: req.params.id })
-    .then(meuble => res.status(200).json(meuble))
-    .catch(error => res.status(404).json({ error }))
+        .then(meuble => res.status(200).json(meuble))
+        .catch(error => res.status(404).json({ error }))
 })
 
-router.put("/id", (req, res, next) => {
-    meubleModel.updateOne({ _id: req.params.id }, { ...req.body, _id: req.params.id})
-    .then(() => res.status(200).json({ message: 'Meuble modifié'}))
-    .catch(error => res.status(400).json({ error }))
+router.put("/:id", (req, res, next) => {
+    meubleModel.updateOne({ _id: req.params.id }, { ...req.body, _id: req.params.id })
+        .then(() => res.status(200).json({ message: 'Meuble modifié' }))
+        .catch(error => res.status(400).json({ error }))
 })
 
 // GET to obtain the info from the "meubles" table
 router.get('/', (req, res) => {
     meubleModel.find()
-        .then(meubles => 
+        .then(meubles =>
             res.status(201).json(meubles)
         )
         .catch(err => {
             console.log(err)
-            .then((() => res.status(201).json({ message: "Meuble enregistré"})))
-            .catch(error => res.status(400).json({ error }))
+                .then((() => res.status(201).json({ message: "Meuble enregistré" })))
+                .catch(error => res.status(400).json({ error }))
         })
 })
 
@@ -53,8 +53,8 @@ router.post('/', (req, res) => {
 // DELETE un meuble
 router.delete('/:id', (req, res) => {
     meubleModel.deleteOne({ _id: req.params.id })
-    .then(() => res.status(200).json({ message: 'Meuble supprimé'}))
-    .catch(error => res.status(400).json({ error }))
+        .then(() => res.status(200).json({ message: 'Meuble supprimé' }))
+        .catch(error => res.status(400).json({ error }))
 
 })
 
