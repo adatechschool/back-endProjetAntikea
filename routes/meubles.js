@@ -56,8 +56,7 @@ router.get('/', (req, res) => {
     filtre.matière = matière;
   }
 
-  meubleModel
-    .find(filtre)
+  meubleModel.find(filtre)
     .then(meubles => res.status(200).json(meubles))
     .catch(error => res.status(400).json({ error }));
 });
