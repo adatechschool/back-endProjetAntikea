@@ -15,6 +15,18 @@ const expressLayouts = require('express-ejs-layouts')
 // middleware to translate requests to something nodeJS understand
 const bodyParser = require('body-parser')
 
+const cors = require('cors');
+app.use(cors({
+    origin: '*'
+}));
+
+
+
+
+
+
+
+
 // import router
 const indexRouter = require('./routes/index')
 const loginRouter = require('./routes/login')
@@ -47,4 +59,4 @@ app.use('/signin', signinRouter)
 // attention le login et le signin nous emmènes sur le meme chemin, à corriger svp
 
 // server start nad listen on a specify port
-app.listen(process.env.PORT || 3000)
+app.listen(3000)
