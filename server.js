@@ -19,7 +19,8 @@ const bodyParser = require('body-parser')
 const indexRouter = require('./routes/index')
 const loginRouter = require('./routes/login')
 const meublesRouter = require('./routes/meubles')
-const signinRouter = require('./routes/login')
+const signinRouter = require('./routes/signin')
+// const meublesTypeRouter = require('./routes/meubles')
 
 // server tools
 app.use(expressLayouts)
@@ -44,6 +45,7 @@ app.use('/', indexRouter)
 app.use('/login', loginRouter)
 app.use('/meubles', meublesRouter)
 app.use('/signin', signinRouter)
+// app.use('/meubles/:type', meublesTypeRouter)
 // attention le login et le signin nous emmènes sur le meme chemin, à corriger svp
 
 // server start nad listen on a specify port

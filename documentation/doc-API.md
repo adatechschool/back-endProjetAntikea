@@ -21,5 +21,5 @@ Collection Users
     GET http://localhost:3000/login
 
     créer un utilisateur (ne fonctionne pas encore, sauve un objet vide dans la BDD)
-    POST http://localhost:3000/login/auth
+    POST http://localhost:3000/login
 
