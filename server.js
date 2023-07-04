@@ -46,6 +46,7 @@ app.use('/login', loginRouter)
 app.use('/meubles', meublesRouter)
 app.use('/signin', signinRouter)
 app.use('/basket', basketRouter)
+app.use('/meubles/matiere', meublesRouter)
 // attention le login et le signin nous emmènes sur le meme chemin, à corriger svp
 
 // server start nad listen on a specify port

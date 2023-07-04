@@ -11,6 +11,6 @@ const basketSchema = new mongoose.Schema({
     "status": { type: String, required: true }
 });
 
-const basketModel = mongoose.model('Basket', basketSchema);
+const basketModel = mongoose.model('basket', basketSchema);
 
 module.exports = basketModel;

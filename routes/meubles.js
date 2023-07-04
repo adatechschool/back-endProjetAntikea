@@ -63,5 +63,14 @@ router.delete('/:id', (req, res) => {
 
 })
 
+// FILTRE
+// GET an item with a specific "matiere"
+router.get('/:matiere', (req, res, next) => {
+    meubleModel.find({ _matiere: req.params.matiere })
+        .then(meubles => res.status(200).json(meubles))
+        .catch(error => res.status(400).json({ error }))
+})
+
+
 module.exports = router
 
