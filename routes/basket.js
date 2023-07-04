@@ -9,7 +9,7 @@ const router = express.Router()
 // use to transform schema in model
 const mongoose = require('mongoose')
 // access models user
-const userModel = require('../models/user');
+const basketModel = require('../models/basket');
 
 
 
@@ -57,7 +57,7 @@ router.post('/', (req, res) => {
 
 // DELETE an item from the database
 // deleteOne() is the method from mongoose library we need to delete one specific item
-router.delete('/basket/:id', (req, res) => {
+router.delete('/:id', (req, res) => {
     basketModel.deleteOne({ _id: req.params.id })
         .then(() => res.status(200).json({ message: 'Panier ajouté' }))
         .catch(error => res.status(400).json({ error }))

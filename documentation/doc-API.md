@@ -16,8 +16,20 @@ Collection Meubles
     supprimer une annonce de meuble
     DELETE http://localhost:3000/meubles/:id
 
+    FILTRES MEUBLES
     recuperer les meubles par matiere
-    
+    GET http://localhost:3000/meubles/?matière=matière
+
+    par couleur
+    GET http://localhost:3000/meubles/?couleur=couleur
+
+    par prix
+    GET http://localhost:3000/meubles/?prix=prix
+
+    par type
+    GET http://localhost:3000/meubles/?type=type
+
+
 
 Collection Users
     récupérer tous les utilisateurs du site
