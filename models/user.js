@@ -9,11 +9,11 @@ const mongoose = require("mongoose")
 // no need id because mondb check it automaticaly
 const userSchema = new mongoose.Schema(
     {
-        "firstName": { type: String },
-        "lastName": { type: String },
-        "email": { type: String },
-        "password": { type: String },
-        "admin": { type: Boolean }
+        "firstName": { type: String, required: true },
+        "lastName": { type: String, required: true },
+        "email": { type: String, required: true },
+        "password": { type: String, required: true },
+        "admin": { type: Boolean, required: true }
     })
 
 const userModel = mongoose.model('users', userSchema)

@@ -60,7 +60,7 @@ router.post('/', (req, res) => {
   })
   addUser.markModified('object') // try to fix the bug, but did not work, no idea if it is usefull
   addUser.save()
-    .then(() => res.status(201).json({ message: 'Meuble ajouté' }))
+    .then(() => res.status(201).json({ message: 'User ajouté' }))
     .catch(error => res.status(400).json({ error }))
 })
 

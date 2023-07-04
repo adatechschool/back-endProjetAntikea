@@ -16,10 +16,29 @@ Collection Meubles
     supprimer une annonce de meuble
     DELETE http://localhost:3000/meubles/:id
 
+    recuperer les meubles par matiere
+    
+
 Collection Users
     récupérer tous les utilisateurs du site
     GET http://localhost:3000/login
 
-    créer un utilisateur (ne fonctionne pas encore, sauve un objet vide dans la BDD)
-    POST http://localhost:3000/login/auth
+    créer un utilisateur 
+    POST http://localhost:3000/login
+
+Collection Baskets
+    récupérer les panier
+    GET http://localhost:3000/basket
+
+    récupérer un seul panier
+    GET http://localhost:3000/basket/:id
+
+    Enregister un panier 
+    POST http://localhost:3000/basket
+
+    modifier un panier 
+    PUT http://localhost:3000/basket/:id
+
+    supprimer un panier
+    DELETE http://localhost:3000/basket/:id
 
