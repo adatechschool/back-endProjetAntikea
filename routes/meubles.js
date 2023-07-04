@@ -36,28 +36,17 @@ router.put("/:id", (req, res, next) => {
 // const meubleModel = require('../models/meubleModel');
 
 router.get('/', (req, res) => {
-  const { type, couleur, prix, etat, matière } = req.query;
+  const { type, couleur, prix, etat, matiere } = req.query;
   // Créez un objet filtre pour stocker les paramètres de requête sélectionnés
   const filtre = {};
   // Vérifiez chaque paramètre et ajoutez-le à l'objet filtre si présent
-  if (type) {
-    filtre.type = type;
-  }
-  if (couleur) {
-    filtre.couleur = couleur;
-  }
-  if (prix) {
-    filtre.prix = prix;
-  }
-  if (etat) {
-    filtre.etat = etat;
-  }
-  if (matière) {
-    filtre.matière = matière;
-  }
+  if (type) {filtre.type = type;}
+  if (couleur) {filtre.couleur = couleur;}
+  if (prix) {filtre.prix = prix;}
+  if (etat) {filtre.etat = etat;}
+  if (matiere) {filtre.matiere = matiere;}
 
-  meubleModel
-    .find(filtre)
+  meubleModel.find(filtre)
     .then(meubles => res.status(200).json(meubles))
     .catch(error => res.status(400).json({ error }));
 });
@@ -84,5 +73,12 @@ router.delete('/:id', (req, res) => {
         .catch(error => res.status(400).json({ error }))
 })
 
-module.exports = router
+router.get('/:champ', (req, res) => {
+    const champ = req.params.champ;
+    meubleModel.distinct(champ)
+      .then(values => res.status(200).json(values))
+      .catch(error => res.status(400).json({ error }));
+  });
+  
 
+module.exports = router
