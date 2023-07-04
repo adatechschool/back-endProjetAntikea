@@ -82,24 +82,7 @@ router.delete('/:id', (req, res) => {
     meubleModel.deleteOne({ _id: req.params.id })
         .then(() => res.status(200).json({ message: 'Meuble supprimé' }))
         .catch(error => res.status(400).json({ error }))
-
 })
-
-router.get('/:type', (req, res) => {
-    meubleModel.find()
-    .then(Meuble =>
-        res.status(200).json(Meuble))
-    .catch(error => res.status(400).json({ error }))
-})
-
-// FILTRE
-// GET an item with a specific "matiere"
-router.get('/:matiere', (req, res, next) => {
-    meubleModel.find({ _matiere: req.params.matiere })
-        .then(meubles => res.status(200).json(meubles))
-        .catch(error => res.status(400).json({ error }))
-})
-
 
 module.exports = router
 
