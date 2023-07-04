@@ -15,7 +15,7 @@ const meubleSchema = new mongoose.Schema({
     "couleur": { type: String, required: true },
     "description": { type: String, required: true },
     "dimensions": { type: String, required: true },
-    "matière": { type: String, required: true },
+    "matiere": { type: String, required: true },
     "stock": { type: Number, required: true },
     "etat": { type: String, required: true },
     "id_vendeur": { type: String, required: true },

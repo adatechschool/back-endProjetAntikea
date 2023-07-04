@@ -33,13 +33,34 @@ router.put("/:id", (req, res, next) => {
 })
 
 // GET to obtain all the info from the "meubles" table
+// const meubleModel = require('../models/meubleModel');
+
 router.get('/', (req, res) => {
-    // find() is the method from mongoose library we need to get a collection
-    meubleModel.find()
-        .then(meubles =>
-            res.status(200).json(meubles))
-        .catch(error => res.status(400).json({ error }))
-})
+  const { type, couleur, prix, etat, matière } = req.query;
+  // Créez un objet filtre pour stocker les paramètres de requête sélectionnés
+  const filtre = {};
+  // Vérifiez chaque paramètre et ajoutez-le à l'objet filtre si présent
+  if (type) {
+    filtre.type = type;
+  }
+  if (couleur) {
+    filtre.couleur = couleur;
+  }
+  if (prix) {
+    filtre.prix = prix;
+  }
+  if (etat) {
+    filtre.etat = etat;
+  }
+  if (matière) {
+    filtre.matière = matière;
+  }
+
+  meubleModel.find(filtre)
+    .then(meubles => res.status(200).json(meubles))
+    .catch(error => res.status(400).json({ error }));
+});
+
 
 // POST to add a furniture in the data base
 router.post('/', (req, res) => {
@@ -60,7 +81,6 @@ router.delete('/:id', (req, res) => {
     meubleModel.deleteOne({ _id: req.params.id })
         .then(() => res.status(200).json({ message: 'Meuble supprimé' }))
         .catch(error => res.status(400).json({ error }))
-
 })
 
 module.exports = router

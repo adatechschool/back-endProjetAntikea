@@ -15,23 +15,19 @@ const expressLayouts = require('express-ejs-layouts')
 // middleware to translate requests to something nodeJS understand
 const bodyParser = require('body-parser')
 
+// deal with CORS for API calls
 const cors = require('cors');
 app.use(cors({
     origin: '*'
 }));
 
-
-
-
-
-
-
-
 // import router
 const indexRouter = require('./routes/index')
 const loginRouter = require('./routes/login')
 const meublesRouter = require('./routes/meubles')
-const signinRouter = require('./routes/login')
+const signinRouter = require('./routes/signin')
+// const meublesTypeRouter = require('./routes/meubles')
+const basketRouter = require('./routes/basket')
 
 // server tools
 app.use(expressLayouts)
@@ -56,6 +52,9 @@ app.use('/', indexRouter)
 app.use('/login', loginRouter)
 app.use('/meubles', meublesRouter)
 app.use('/signin', signinRouter)
+// app.use('/meubles/:type', meublesTypeRouter)
+app.use('/basket', basketRouter)
+app.use('/meubles/matiere', meublesRouter)
 // attention le login et le signin nous emmènes sur le meme chemin, à corriger svp
 
 // server start nad listen on a specify port
