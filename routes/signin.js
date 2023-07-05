@@ -27,20 +27,20 @@ router.get('/', (req, res) => {
     })
 })
 
-router.post('/', async (req, res) => {
-  try {
-    const newUser = new userModel({
-      ...req.body
-    })
-    console.log(req.body);
-    const saveUser = await newUser.save()
-    res.status(201).json(saveUser)
-  }
-  catch (error) {
-    res.status(400).json(error)
-    console.log(error);
-  }
-});
+// router.post('/', async (req, res) => {
+//   try {
+//     const newUser = new userModel({
+//       ...req.body
+//     })
+//     console.log(req.body);
+//     const saveUser = await newUser.save()
+//     res.status(201).json(saveUser)
+//   }
+//   catch (error) {
+//     res.status(400).json(error)
+//     console.log(error);
+//   }
+// });
 
 
 // GET a specific user from the database
@@ -71,6 +71,15 @@ router.delete('/:id', (req, res) => {
   userModel.deleteOne({ _id: req.params.id })
     .then(() => res.status(200).json({ message: 'User supprimé' }))
     .catch(error => res.status(400).json({ error }))
+})
+
+//PUT a user from the dataBase
+router.put("/:id", (req, res, next) => {
+  // updateOne() is the method from mongoose library we need to modify one specific item
+  // take 2 arguments :  1 : id of request to compare. 2 : new version of the object
+  userModel.updateOne({ _id: req.params.id }, { ...req.body, _id: req.params.id }) // "..." is a spread operator allows us to get all the request in one command
+      .then(() => res.status(200).json({ message: 'User modifié' }))
+      .catch(error => res.status(400).json({ error }))
 })
 
 
