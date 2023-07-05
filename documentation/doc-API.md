@@ -19,15 +19,16 @@ Collection Meubles
     FILTRES MEUBLES
     recuperer les meubles par matiere
     GET http://localhost:3000/meubles/?matière=matière
+    possible :
+    GET http://localhost:3000/meubles/?couleur=couleur&?type=type
 
-    par couleur
-    GET http://localhost:3000/meubles/?couleur=couleur
+    RECUPERER toutes les valeurs d'un CHAMP
+    GET http://localhost:3000/meubles/filtre/CHAMP
+        
+        exemple : GET http://localhost:3000/meubles/filtre/couleur 
+            retourne : ["Blanc","Bleu","Brun","Marron","Noir","blanc"]
 
-    par prix
-    GET http://localhost:3000/meubles/?prix=prix
 
-    par type
-    GET http://localhost:3000/meubles/?type=type
 
 
 

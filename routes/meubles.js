@@ -73,12 +73,12 @@ router.delete('/:id', (req, res) => {
         .catch(error => res.status(400).json({ error }))
 })
 
-router.get('/:champ', (req, res) => {
+// RECUPERER toutes les valeurs distinctes d'un parametre (couleur, prix, matiere...)
+router.get('/filtre/:champ', (req, res) => {
     const champ = req.params.champ;
     meubleModel.distinct(champ)
       .then(values => res.status(200).json(values))
       .catch(error => res.status(400).json({ error }));
   });
-  
 
 module.exports = router
